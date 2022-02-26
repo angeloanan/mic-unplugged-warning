@@ -23,6 +23,7 @@ jobs:
         with:
           profile: minimal
           toolchain: nightly
+          target: ${{ matrix.target }}
 
       - name: Rust dependency cache
         uses: Swatinem/rust-cache@v1
