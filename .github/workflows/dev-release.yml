@@ -38,7 +38,7 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: Dev release ${{ env.GITHUB_HEAD_REF }} - ${{ matrix.platform }}
+          name: Dev release ${{ github.sha }} - ${{ matrix.platform }}
           path: |
             target/release/unplugged-mic-notification
             target/release/unplugged-mic-notification.exe

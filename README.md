@@ -6,7 +6,9 @@
 
 ## Installation
 
-Download the latest release using the side menu [(or by clicking here)](https://github.com/angeloanan/mic-unplugged-warning/releases)
+Download the latest stable build using the side menu [(or by clicking here)](https://github.com/angeloanan/mic-unplugged-warning/releases).
+
+If you live on the bleeding edge, you can also download the latest development build on [the actions tab](https://github.com/angeloanan/unplugged-mic-notification/actions).
 
 ## Building from scratch
 
