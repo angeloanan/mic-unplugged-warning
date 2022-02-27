@@ -5,7 +5,7 @@ env:
 
 jobs:
   release:
-    name: dev ${{ matrix.target }}
+    name: Development Build - ${{ matrix.platform }}
     strategy:
       fail-fast: false
       matrix:
@@ -13,6 +13,13 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@master
+
+      - name: Install Linux Deps
+        if: ${{ matrix.platform == 'ubuntu-latest' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libasound2-dev
 
       - name: Setup Rust Toolchain
         uses: actions-rs/toolchain@v1
