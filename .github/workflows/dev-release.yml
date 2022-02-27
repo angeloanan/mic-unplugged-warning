@@ -27,10 +27,19 @@ jobs:
           profile: minimal
           toolchain: stable
 
-      - name: Rust dependency cache
+      - name: Rust Dependency Cache
         uses: Swatinem/rust-cache@v1
 
       - uses: actions-rs/cargo@v1
         with:
           command: build
           args: --release
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Development Build - ${{ matrix.platform }} (${{ env.GITHUB_SHA }})
+          path: |
+            target/release/unplugged-mic-notification
+            target/release/unplugged-mic-notification.exe
+            target/release/unplugged-mic-notification.exe
