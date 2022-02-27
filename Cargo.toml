@@ -1,5 +1,5 @@
 [package]
-name = "mic-unplugged-warning"
+name = "unplugged-mic-notification"
 version = "0.1.0"
 edition = "2021"
 
